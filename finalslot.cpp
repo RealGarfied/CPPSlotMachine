@@ -18,6 +18,7 @@ int main()
 
     int chosenOption; // Used in menu to store what the most recent chosen option was selected
     string subtract = "null"; // Used in free play mode to ask the user if they want subtracting enabled/disabled
+    int betZero; // Used to prevent game from ending entirely, instead going to the main menu
 
     do {
 
@@ -204,9 +205,9 @@ int main()
                 }
                 if (bet == 0)
                 {
-                    return 1;
+                    betZero = 1
                 }
-            } while (tokens >= 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
+            } while (tokens >= 1 || betZero == 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
         }
     } while (chosenOption != 3);
 }
