@@ -21,6 +21,11 @@ int main()
 
     do {
 
+        if (tokens < 99)
+        {
+            tokens = 100;
+        }
+
         cout << "-------{ WELCOME - MAIN MENU }-------" << endl;
         cout << "" << endl;
         cout << "[1] REGULAR PLAY" << endl;
