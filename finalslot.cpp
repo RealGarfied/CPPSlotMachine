@@ -109,9 +109,9 @@ int main()
                 }
                 if (bet == 0)
                 {
-                    return 0;
+                    betZero = 1;
                 }
-            } while (tokens >= 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
+            } while (tokens >= 1 || betZero == 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
         }
 
         // END OPTION ONE
@@ -119,6 +119,8 @@ int main()
 
         if (chosenOption == 2)
         {
+            tokens = 1000;
+
             cout << "--------{  TOKENS: " << tokens << "  }--------" << endl; // Shows your balance when you start the game
             do {
 
@@ -205,7 +207,7 @@ int main()
                 }
                 if (bet == 0)
                 {
-                    betZero = 1
+                    betZero = 1;
                 }
             } while (tokens >= 1 || betZero == 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
         }
