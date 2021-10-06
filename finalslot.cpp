@@ -109,9 +109,11 @@ int main()
                 }
                 if (bet == 0)
                 {
-                    betZero = 1;
+                    betZero = 1; // End game via betZero
+                    subtract = "null"; // Reset the subtract function
+                    return 0;
                 }
-            } while (tokens >= 1 || betZero == 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
+            } while (tokens >= 1 || betZero != 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
         }
 
         // END OPTION ONE
@@ -209,6 +211,7 @@ int main()
                 {
                     betZero = 1; // End game via betZero
                     subtract = "null"; // Reset the subtract function
+                    return 0;
                 }
             } while (tokens >= 1 || betZero == 1); // Repeat until balance is 0 less than or equal to 0 or the bet is less than or equal to 0
         }
